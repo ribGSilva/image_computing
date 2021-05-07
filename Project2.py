@@ -1,6 +1,5 @@
 from os import listdir
 from os.path import isfile
-import random
 
 from project2 import image_processor
 import pytesseract
@@ -26,8 +25,6 @@ def main():
     path = path_wring_plates
     [plates.append(path + file) for file in listdir(path) if isfile(path + file)]
     # plates = [path + 'Slide4.JPG']
-
-    random.shuffle(plates)
 
     processors = []
     for plate in plates:
